@@ -59,6 +59,10 @@ h1 {
   color: #273238;
 }
 
+.primary-btn:focus {
+  outline: none;
+}
+
 button {
   background: none;
   cursor: pointer;
@@ -305,6 +309,7 @@ button {
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
+  padding-left: 0;
 }
 
 .social-media-icons {
