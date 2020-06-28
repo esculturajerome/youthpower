@@ -69,6 +69,10 @@ button {
   border: none;
 }
 
+button:focus {
+  outline: none;
+}
+
 .navbar {
   display: flex;
   align-items: center;

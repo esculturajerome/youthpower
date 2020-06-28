@@ -10,24 +10,26 @@ const Footer = () => {
       <hr></hr>
       <div className="social-media-icons">
         <button
-          href="https://www.facebook.com/knhsyouthpower/"
-          rel="noopener noreferrer"
-          target="_blank"
+          onClick={() =>
+            window.open("https://www.facebook.com/knhsyouthpower/", "_blank")
+          }
         >
           <img src={require("../images/facebook.svg")} alt="Facebook" />
         </button>
       </div>
       <div className="contact-details">
-        <button href="" rel="noopener noreferrer" target="_blank">
+        <button onClick={() => window.open("tel:09214222201", "_blank")}>
           +639214222201
         </button>
-        <button href="" rel="noopener noreferrer" target="_blank">
+        <button
+          onClick={() => window.open("mailto:sample@gmail.com", "_blank")}
+        >
           youthpower@gmail.com
         </button>
         <button
-          href="https://goo.gl/maps/fEH4vHitPht3rsqZ8"
-          rel="noopener noreferrer"
-          target="_blank"
+          onClick={() =>
+            window.open("https://goo.gl/maps/fEH4vHitPht3rsqZ8/", "_blank")
+          }
         >
           Phase 10B,Package 6, Barangay 176, Caloocan City North, Metro Manila,
           Philippines
