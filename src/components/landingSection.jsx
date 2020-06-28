@@ -3,10 +3,7 @@ import React from "react";
 const LandingPage = () => {
   return (
     <div className="landing-container">
-      <img
-        src={require("../images/intro.jpg")}
-        alt="Youth Power Landing Image"
-      />
+      <img src={require("../images/intro.jpg")} alt="Youth Power" />
       <div className="landing-details">
         <h3>Where every book lover is enjoined in the circle</h3>
         <p>
