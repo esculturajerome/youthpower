@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <ul>
-        <li>Join Us</li>
-        <li>Donate to us</li>
+        <li className="primary-btn">Join Us</li>
+        <li className="primary-btn">Donate to us</li>
       </ul>
       <hr></hr>
       <div className="social-media-icons">

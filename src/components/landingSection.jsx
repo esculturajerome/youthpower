@@ -3,7 +3,9 @@ import React from "react";
 const LandingPage = () => {
   return (
     <div className="landing-container">
-      <img src={require("../images/intro.jpg")} alt="Youth Power" />
+      <div className="landing-image">
+        <img src={require("../images/intro.png")} alt="Youth Power" />
+      </div>
       <div className="landing-details">
         <h3>Where every book lover is enjoined in the circle</h3>
         <p>
@@ -12,9 +14,7 @@ const LandingPage = () => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.{" "}
         </p>
-      </div>
-      <div className="landing-btn">
-        <p>Donate a Book</p>
+        <button className="primary-btn">Donate a book</button>
       </div>
     </div>
   );

@@ -6,7 +6,8 @@ Dark: #273238
 Dark green: #42533F */
 
 body {
-  padding: 0 25px;
+  /* padding: 0 25px; */
+  background-image: url(images/noise.png);
 }
 
 h1,
@@ -41,11 +42,33 @@ h1 {
   cursor: pointer;
   margin: 0 4px;
   padding: 10px;
+  transition: all 0.1s ease-out;
+}
+
+.primary-btn:hover {
+  font-weight: 900;
+  font-size: 16px;
+  transition: all 0.2s ease-out;
+}
+
+.primary-btn:visited {
+  color: #273238;
+}
+
+.primary-btn:active {
+  color: #273238;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
 }
 
 .navbar {
   display: flex;
   align-items: center;
+  padding: 0 20px;
 }
 
 .navbar h1 {
@@ -75,11 +98,13 @@ h1 {
 
 .landing-container img {
   width: 100%;
+  max-width: 500px;
   display: block;
 }
 
 .landing-details {
   margin: 35px 0;
+  padding: 0 20px;
 }
 
 .landing-container h2 {
@@ -111,18 +136,29 @@ h1 {
   cursor: pointer;
 }
 
+.landing-details button {
+  min-width: 150px;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 /* Recent Section */
 
 .recent-item-container {
+  background: #fff;
   display: flex;
-  padding: 65px 0;
-  margin: 0 -25px 0 0;
+  padding: 65px 0 65px 20px;
+  margin: 0 0 0 0;
   overflow: hidden;
+  justify-content: flex-start;
 }
 
 .recent-container {
+  background: #fff;
   display: flex;
   align-items: center;
+  padding: 35px 20px 0 20px;
 }
 
 .recent-container h2 {
@@ -130,14 +166,14 @@ h1 {
 }
 
 .recent-container p {
-  flex-basis: 60px;
+  flex-basis: 80px;
   text-align: right;
   padding-right: 0;
   margin-right: 0;
 }
 
 .recent-item {
-  width: 270px;
+  min-width: 270px;
   margin-right: 25px;
 }
 
@@ -182,12 +218,11 @@ h1 {
 /* Donation Section */
 
 .donation-container {
-  background: #273238;
-  margin: 0 -25px;
+  margin: 0;
 }
 
 .donation-item {
-  padding: 60px 35px;
+  padding: 60px 20px;
 }
 
 .donation-item:last-child {
@@ -197,8 +232,6 @@ h1 {
 .donation-item img {
   width: 100px;
   margin-left: -15px;
-  filter: invert(99%) sepia(5%) saturate(637%) hue-rotate(263deg)
-    brightness(119%) contrast(100%);
 }
 
 .donation-item p {
@@ -207,7 +240,6 @@ h1 {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.28px;
-  color: #bdbdbd;
 }
 
 .donation-item .primary-btn {
@@ -218,7 +250,8 @@ h1 {
 /* Learn More Section  */
 
 .learn-container {
-  margin: 0 -25px;
+  background: #fff;
+  margin: 0;
 }
 
 .learn-image {
@@ -231,11 +264,12 @@ h1 {
 }
 
 .learn-image img {
-  max-width: 400px;
+  min-width: 350px;
+  width: 100%;
 }
 
 .learn-details {
-  padding: 25px 35px;
+  padding: 25px 20px;
 }
 
 .learn-details p {
@@ -255,9 +289,9 @@ h1 {
 /* footer  */
 
 .footer-container {
-  background: #273238;
-  margin: 0 -25px;
-  padding: 30px 35px;
+  background: #fff;
+  margin: 0;
+  padding: 30px 20px;
 }
 
 .footer-container ul {
@@ -266,20 +300,18 @@ h1 {
 }
 
 .footer-container ul li {
-  color: #fff;
+  color: #273238;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
-  margin: 20px 0;
 }
 
 .social-media-icons {
   margin: 25px 0 10px 0;
 }
 
-.contact-details a {
-  color: #fff;
+.contact-details button {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -287,8 +319,90 @@ h1 {
   margin: 15px 0;
   display: block;
   text-decoration: none;
+  text-align: left;
 }
 
-.contact-details a:last-child {
+.contact-details button:last-child {
   margin-top: 30px;
+}
+
+/* Tablet Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 0 80px;
+  }
+
+  .landing-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 780px;
+  }
+
+  .landing-image {
+    flex-basis: 50%;
+  }
+
+  .landing-details {
+    flex-basis: 50%;
+    max-width: 650px;
+  }
+
+  .landing-container img {
+    margin: 0 auto;
+  }
+
+  .recent-container {
+    padding: 35px 80px 0 80px;
+  }
+
+  .recent-item-container {
+    justify-content: center;
+    padding: 150px 80px;
+  }
+
+  .recent-item img {
+    max-width: 100%;
+  }
+  .donation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+  }
+
+  .donation-item {
+    padding: 100px 80px;
+    width: 50%;
+  }
+
+  .donation-item:last-child {
+    padding-top: 100px;
+  }
+
+  .donation-item p {
+    width: 450px;
+  }
+
+  .learn-container {
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+  }
+
+  .learn-details {
+    flex-basis: 50%;
+    padding-left: 80px;
+  }
+  .learn-image {
+    flex-basis: 50%;
+    min-height: 500px;
+  }
+  .learn-details p {
+    max-width: 600px;
+  }
+
+  .footer-container {
+    padding: 80px 80px 30px 80px;
+  }
 }

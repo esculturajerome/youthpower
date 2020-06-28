@@ -4,10 +4,10 @@ const LearnMore = () => {
   return (
     <div className="learn-container">
       <div className="learn-image">
-        <img src={require("../images/learnmore.png")} alt="Learn More" />
+        <img src={require("../images/learnmore.jpg")} alt="Learn More" />
       </div>
       <div className="learn-details">
-        <h2>Learn about Youth Power</h2>
+        <h2>Learn more about Youth Power</h2>
         <p>
           Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
           fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
