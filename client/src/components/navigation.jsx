@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Nav extends Component {
-  state = { onScroll: null };
+  state = { onScroll: "" };
 
   componentDidMount() {
     window.addEventListener("scroll", () => {

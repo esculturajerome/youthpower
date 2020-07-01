@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../styles/buttonStyle.css";
+
 const DisplayContent = ({ title, date, body }) => {
   return (
     <React.Fragment>
       <div className="content-container">
         <div className="content-back">
           <Link to="/">
-            <img src={require("../images/icons/close.svg")} alt="Close" />
+            <img
+              src={require("../images/icons/close.svg")}
+              alt="Close"
+              className="icon-btn"
+            />
           </Link>
         </div>
         <div className="half-container">
@@ -20,14 +26,17 @@ const DisplayContent = ({ title, date, body }) => {
           <div className="share-icons">
             <img
               src={require("../images/icons/facebook.svg")}
+              className="icon-btn"
               alt="Share on Facebook"
             />
             <img
               src={require("../images/icons/twitter.svg")}
+              className="icon-btn"
               alt="Share on Twitter"
             />
             <img
               src={require("../images/icons/linkedin.svg")}
+              className="icon-btn"
               alt="Share on LinkedIn"
             />
           </div>
