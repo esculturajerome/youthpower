@@ -10,7 +10,7 @@ class RecentItems extends Component {
   render() {
     const { postData } = this.props;
     return (
-      <div className="recent-item" key={postData.id}>
+      <div className="recent-item">
         <div className="recent-img-container">
           <img src={require("../images/activity.jpg")} alt="Activity Sample" />
         </div>

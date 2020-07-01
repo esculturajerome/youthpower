@@ -6,8 +6,6 @@ import RecentItems from "../recent-items";
 
 class RecentActivities extends Component {
   state = {
-    users: [],
-    isOpen: false,
     posts: [
       {
         id: uuidv4(),
@@ -92,15 +90,17 @@ class RecentActivities extends Component {
     return (
       <React.Fragment>
         <div className="recent-container">
-          <h1>Recent Activities</h1>
-        </div>
+          <div className="recent-title">
+            <h1>Recent Activities</h1>
+          </div>
 
-        <div className="recent-item-container">
-          <Slider {...settings}>
-            {posts.map((post) => (
-              <RecentItems postData={post} />
-            ))}
-          </Slider>
+          <div className="recent-item-container">
+            <Slider {...settings}>
+              {posts.map((post) => (
+                <RecentItems key={post.id} postData={post} />
+              ))}
+            </Slider>
+          </div>
         </div>
       </React.Fragment>
     );
