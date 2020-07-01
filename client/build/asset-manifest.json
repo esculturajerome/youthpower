@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f12b3fd6.chunk.css",
+    "main.js": "/static/js/main.3cdff219.chunk.js",
+    "main.js.map": "/static/js/main.3cdff219.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2ccdca22.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2ccdca22.js.map",
+    "static/js/2.e1451704.chunk.js": "/static/js/2.e1451704.chunk.js",
+    "static/js/2.e1451704.chunk.js.map": "/static/js/2.e1451704.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.738794c8249cdb497075daa3e883e29c.js": "/precache-manifest.738794c8249cdb497075daa3e883e29c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f12b3fd6.chunk.css.map": "/static/css/main.f12b3fd6.chunk.css.map",
+    "static/js/2.e1451704.chunk.js.LICENSE.txt": "/static/js/2.e1451704.chunk.js.LICENSE.txt",
+    "static/media/activity.jpg": "/static/media/activity.c2c13bce.jpg",
+    "static/media/donation-icon.svg": "/static/media/donation-icon.bfdeb932.svg",
+    "static/media/facebook.svg": "/static/media/facebook.2af4fed0.svg",
+    "static/media/intro.png": "/static/media/intro.cb702066.png",
+    "static/media/learnmore.jpg": "/static/media/learnmore.137c9677.jpg",
+    "static/media/App.css": "/static/media/noise.8a938dd6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ccdca22.js",
+    "static/js/2.e1451704.chunk.js",
+    "static/css/main.f12b3fd6.chunk.css",
+    "static/js/main.3cdff219.chunk.js"
+  ]
+}

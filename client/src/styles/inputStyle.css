@@ -1,0 +1,24 @@
+.input-field {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.28px;
+  color: #42533f;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.login-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #273238;
+  margin-bottom: 15px;
+}
