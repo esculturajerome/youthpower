@@ -10,7 +10,7 @@
     "server": "cross-env NODE_ENV=development nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run-script build --prefix client"
+    "client-deploy": "npm run-script build --prefix client"
   },
   "author": "Jerome Escultura",
   "license": "MIT",
