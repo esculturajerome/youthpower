@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "cross-env NODE_ENV=production node server",
+    "server-build": "cross-env NODE_ENV=production node server",
+    "client-build": "npm build --prefix client",
     "server": "cross-env NODE_ENV=development nodemon server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "concurrently \"npm run server-build\" \"npm run client-build\""
   },
   "author": "Jerome Escultura",
   "license": "MIT",
