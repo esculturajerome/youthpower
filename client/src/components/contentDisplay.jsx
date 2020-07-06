@@ -1,24 +1,72 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Gallery from "./gallery";
+import { Link } from "react-scroll";
 
-import "../styles/buttonStyle.css";
-
-const DisplayContent = ({ title, date, body }) => {
+const DisplayContent = ({
+  image,
+  title,
+  date,
+  body,
+  history,
+  gallery,
+  isToggleOn,
+  onClick,
+}) => {
   return (
-    <React.Fragment>
-      <div className="content-container">
+    <>
+      <div className="content-container" id="backTop">
         <div className="content-back">
-          <Link to="/">
+          <img
+            src={require("../images/icons/close.svg")}
+            alt="Close"
+            className="icon-btn"
+            onClick={() => history.goBack()}
+          />
+        </div>
+        {image && (
+          <div className="half-container img">
             <img
-              src={require("../images/icons/close.svg")}
-              alt="Close"
-              className="icon-btn"
+              src={require("../images/" + image)}
+              className="cover-img"
+              alt={title}
             />
-          </Link>
-        </div>
-        <div className="half-container">
-          <img src={require("../images/activity.jpg")} alt="Activity Sample" />
-        </div>
+            {gallery && (
+              <li>
+                {isToggleOn === false ? (
+                  <Link
+                    activeClass="active"
+                    to="gallery"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <img
+                      src={require("../images/icons/gallery.svg")}
+                      className="icon-btn"
+                      alt="view gallery"
+                      onClick={onClick}
+                    />
+                  </Link>
+                ) : (
+                  <Link
+                    activeClass="active"
+                    to="backTop"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    <img
+                      src={require("../images/icons/backTop.svg")}
+                      className="icon-btn"
+                      alt="view gallery"
+                      onClick={onClick}
+                    />
+                  </Link>
+                )}
+              </li>
+            )}
+          </div>
+        )}
         <div className="half-container details">
           <h1>{title}</h1>
           <h2>{date}</h2>
@@ -42,7 +90,12 @@ const DisplayContent = ({ title, date, body }) => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+      {gallery && (
+        <div id="gallery">
+          <Gallery galleryImages={gallery} />
+        </div>
+      )}
+    </>
   );
 };
 

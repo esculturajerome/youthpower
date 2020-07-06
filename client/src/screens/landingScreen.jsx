@@ -1,4 +1,6 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
+
 import LandingPage from "../components/landingComponents/landingSection";
 import Footer from "../components/footer";
 import RecentActivities from "../components/landingComponents/recentActivitiesSection";
@@ -19,4 +21,4 @@ const LandingScreen = ({ onClick }) => {
   );
 };
 
-export default LandingScreen;
+export default withRouter(LandingScreen);
