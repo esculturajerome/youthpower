@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Link as LinkAchor } from "react-scroll";
 import styled from "styled-components";
 
 import ButtonComponent from "./buttonComponent";
-import HamburgerMenu from "./hambuger";
 
 class Nav extends Component {
   state = [{ onScroll: "" }, { onClick: false }];
