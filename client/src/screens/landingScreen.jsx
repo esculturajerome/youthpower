@@ -11,12 +11,12 @@ import Nav from "../components/navigation";
 const LandingScreen = () => {
   return (
     <React.Fragment>
-      {/* <Nav /> */}
-      {/* <LandingPage /> */}
+      <Nav />
+      <LandingPage />
       <RecentActivities />
-      {/* <DonationSection /> */}
-      {/* <LearnMore /> */}
-      {/* <Footer /> */}
+      <DonationSection />
+      <LearnMore />
+      <Footer />
     </React.Fragment>
   );
 };
