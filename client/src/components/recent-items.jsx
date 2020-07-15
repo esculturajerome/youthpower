@@ -13,26 +13,26 @@ class RecentItems extends Component {
     return (
       <div className="recent-item">
         {postData.image && (
-          <div className="recent-img-container">
-            <Link
-              to={{
-                pathname: `/activity/${postData.id}`,
-                state: {
-                  id: `${postData.id}`,
-                  image: `${postData.image}`,
-                  title: `${postData.title}`,
-                  date: `${postData.date}`,
-                  body: `${postData.body}`,
-                  gallery: { galleryArray },
-                },
-              }}
-            >
+          <Link
+            to={{
+              pathname: `/activity/${postData.id}`,
+              state: {
+                id: `${postData.id}`,
+                image: `${postData.image}`,
+                title: `${postData.title}`,
+                date: `${postData.date}`,
+                body: `${postData.body}`,
+                gallery: { galleryArray },
+              },
+            }}
+          >
+            <div className="recent-img-container">
               <img
                 src={require("../images/" + postData.image)}
                 alt={postData.title}
               />
-            </Link>
-          </div>
+            </div>
+          </Link>
         )}
         <div className="recent-details-container">
           <h2>{postData.title}</h2>

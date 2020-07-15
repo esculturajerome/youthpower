@@ -7,33 +7,33 @@ import ContentScreen from "../screens/contentScreen";
 import LandingScreen from "../screens/landingScreen";
 import LoginScreen from "../screens/loginScreen";
 
-function Container({ location, history }) {
+function Container({ location }) {
   return (
     <Wrapper>
-      <TransitionGroup>
+      {/* <TransitionGroup>
         <CSSTransition
           key={location.key}
           timeout={{ enter: 300, exit: 300 }}
           classNames={"fade"}
           unmountOnExit
           appear
-        >
-          <section className="route-section">
-            <Switch location={location}>
-              <Route
-                path="/activity/:id/"
-                render={(props) => <ContentScreen {...props} />}
-              />
-              <Route
-                path="/about/"
-                render={(props) => <ContentScreen {...props} />}
-              />
-              <Route path="/login" render={() => <LoginScreen />} />
-              <Route path="/" exact component={LandingScreen} />
-            </Switch>
-          </section>
-        </CSSTransition>
-      </TransitionGroup>
+        > */}
+      <section className="route-section">
+        <Switch location={location}>
+          <Route
+            path="/activity/:id/"
+            render={(props) => <ContentScreen {...props} />}
+          />
+          <Route
+            path="/about/"
+            render={(props) => <ContentScreen {...props} />}
+          />
+          <Route path="/login" render={() => <LoginScreen />} />
+          <Route path="/" exact component={LandingScreen} />
+        </Switch>
+      </section>
+      {/* </CSSTransition>
+      </TransitionGroup> */}
     </Wrapper>
   );
 }

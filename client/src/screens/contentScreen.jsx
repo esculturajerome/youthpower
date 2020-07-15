@@ -16,6 +16,7 @@ class ContentScreen extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    document.addEventListener("keydown", this.escFunction, false);
     const { id } = this.props.location.state;
     const { image } = this.props.location.state;
     const { title } = this.props.location.state;
@@ -32,16 +33,23 @@ class ContentScreen extends Component {
         this.setState({ isToggleOn: true });
       }
     };
+  }
 
-    // this.setState((prevState) => ({
-    //   gallery: [...prevState.gallery, gallery],
-    // }));
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escFunction, false);
   }
 
   handleView = () => {
     this.setState((state) => ({
       isToggleOn: !state.isToggleOn,
     }));
+  };
+
+  handleBack = (e) => {
+    this.props.history.goBack();
+    if (e.keyCode === 27) {
+      this.props.history.goBack();
+    }
   };
 
   render() {
@@ -59,6 +67,7 @@ class ContentScreen extends Component {
           isToggleOn={isToggleOn}
           onClick={this.handleView}
           history={history}
+          handleBack={(e) => this.handleBack(e)}
         />
       </ContentWrapper>
     );
@@ -133,7 +142,7 @@ const ContentWrapper = styled.div`
     }
 
     .content-container .half-container.img .cover-img {
-      border-radius: 0 50px 50px;
+      border-radius: 0 50px 50px 0;
     }
   }
 `;
