@@ -8,15 +8,15 @@ import LearnMore from "../components/landingComponents/learnMoreSection";
 import DonationSection from "../components/landingComponents/donationSection";
 import Nav from "../components/navigation";
 
-const LandingScreen = ({ onClick }) => {
+const LandingScreen = () => {
   return (
     <React.Fragment>
-      <Nav onClick={onClick} />
-      <LandingPage />
+      {/* <Nav /> */}
+      {/* <LandingPage /> */}
       <RecentActivities />
-      <DonationSection />
-      <LearnMore />
-      <Footer />
+      {/* <DonationSection /> */}
+      {/* <LearnMore /> */}
+      {/* <Footer /> */}
     </React.Fragment>
   );
 };

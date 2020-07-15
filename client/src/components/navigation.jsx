@@ -1,17 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Link as LinkAchor } from "react-scroll";
 import styled from "styled-components";
 
 import ButtonComponent from "./buttonComponent";
-import HamburgerMenu from "./hambuger";
 
 class Nav extends Component {
-  state = [{ onScroll: "" }, { onClick: false }];
+  state = { onScroll: null };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
-    this.setState({ onClick: false });
   }
 
   componentWillUnmount() {
@@ -26,13 +23,12 @@ class Nav extends Component {
     this.setState({ onScroll });
   };
 
-  handleClick = () => {
-    this.setState({ onClick: !this.state.onClick });
-  };
+  // handleClick = () => {
+  //   this.setState({ onClick: !this.state.onClick });
+  // };
 
   render() {
-    // const { onClick } = this.props;
-    const { onScroll, onClick } = this.state;
+    const { onScroll } = this.state;
     return (
       <NavigationWrapper>
         <div className={`navbar ${onScroll}`}>
@@ -72,7 +68,6 @@ class Nav extends Component {
             </LinkAchor>
           </div>
         </div>
-        {/* <HamburgerMenu onClick={onClick} handleClick={this.handleClick} /> */}
       </NavigationWrapper>
     );
   }

@@ -11,6 +11,7 @@ const DisplayContent = ({
   gallery,
   isToggleOn,
   onClick,
+  handleBack,
 }) => {
   return (
     <>
@@ -20,7 +21,7 @@ const DisplayContent = ({
             src={require("../images/icons/close.svg")}
             alt="Close"
             className="icon-btn"
-            onClick={() => history.goBack()}
+            onClick={(e) => handleBack(e)}
           />
         </div>
         {image && (

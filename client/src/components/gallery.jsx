@@ -9,7 +9,7 @@ class Gallery extends Component {
         <GalleryWrapper>
           <ul>
             {galleryImages.map((image, i) => (
-              <React.Fragment>
+              <React.Fragment key={i}>
                 {image.imageLink && (
                   <li key={i}>
                     <img
